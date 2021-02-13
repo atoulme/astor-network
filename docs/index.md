@@ -35,4 +35,11 @@ sidebar: false
     <li>Block explorer support</li>
   </ul>
 
+  <ul class="intro-block">
+    <li><router-link to="/dev/"><span class="arrow">→</span>Dev</router-link></li>
+    <li>Run a local Keccak mining node</li>
+    <li>Docker Compose</li>
+    <li>Testing mining</li>
+  </ul>
+
 </div>
