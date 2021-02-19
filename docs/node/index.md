@@ -6,7 +6,7 @@ lang: en-US
 We are making available a simple Docker-based set up with Hyperledger Besu so you can try out locally Keccak mining.
 The local network has a very small fixed difficulty as well so you can easily produce blocks on your machine with CPU mining.
 
-1. `$ docker run -p 8545:8545 tmio/besu-keccak --rpc-http-enabled --rpc-http-api=admin,eth,debug,miner,net,txpool,priv,trace,web3 --rpc-http-cors-origins="all" --network=ecip1049_dev --miner-enabled --miner-coinbase=fe3b557e8fb62b89f4916b721be55ceb828dbd73`
+`$ docker run -p 8545:8545 tmio/besu-keccak --rpc-http-enabled --rpc-http-api=admin,eth,debug,miner,net,txpool,priv,trace,web3 --rpc-http-cors-origins="all" --network=ecip1049_dev --miner-enabled --miner-coinbase=fe3b557e8fb62b89f4916b721be55ceb828dbd73`
 
 ## Mining locally
 
@@ -17,15 +17,8 @@ You will need to enable Besu's stratum mining as well:
 1. `$ docker run -p 8545:8545 tmio/besu-keccak --rpc-http-enabled --rpc-http-api=admin,eth,debug,miner,net,txpool,priv,trace,web3 --rpc-http-cors-origins="all" --network=ecip1049_dev --miner-enabled --miner-coinbase=fe3b557e8fb62b89f4916b721be55ceb828dbd73
   --miner-stratum-enabled --miner-stratum-host=0.0.0.0`
 
-Currently, we have only created a CPU miner in Python, however we will be working on an open source GPU version as well. Please consult [our resources](/mine/) if you are interested in mining.
 
-7. `$ git clone https://github.com/snissn/ethereum-cpu-miner.git`
-8. `$ pip3 install -r requirements.txt`
-9. `$ sh run.sh`
-
-Make sure to change the `run.sh` to have the `-n` be the number of blocks you want to mine on the testnet. Screenshot below is succesful testnet mine to the author address.
-
-10. Connect Metamask to `localhost:8545`
+1. Connect Metamask to `localhost:8545`
 
 The dev network uses 3 accounts. Here are the private keys:
 * `8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63`
@@ -33,6 +26,16 @@ The dev network uses 3 accounts. Here are the private keys:
 * `ae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f`
 
 You can import them into Metamask.
+
+## Mining Client (EXPERIMENTAL)
+
+Currently, we have only created a CPU miner in Python, however we will be working on an open source GPU version as well. Please consult [our resources](/mine/) if you are interested in mining.
+
+1. `$ git clone https://github.com/snissn/ethereum-cpu-miner.git`
+1. `$ pip3 install -r requirements.txt`
+1. `$ sh run.sh`
+
+Make sure to change the `run.sh` to have the `-n` be the number of blocks you want to mine on the testnet. Screenshot below is succesful testnet mine to the author address.
 
 ## More difficulty
 
