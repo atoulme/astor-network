@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f https://github.com/p3c-bot/astor-network.git master:gh-pages
+git push -f https://github.com/antsankov/astor-network.git master:gh-pages
 
 cd -

@@ -3,7 +3,7 @@ title: Home
 date: April 18, 2019
 sidebar: false
 ---
-<div class="center"><b>Astor Network</b> is an Ethereum testnet that uses SHA3 as its proof of work method. SHA3 allows for a higher performance, and safer block production. Astor is based on <a href="https://github.com/ethereumclassic/ECIPs/issues/13" target="_blank"> ECIP-1049 </a> which was proposed for Ethereum Classic in response to the 51% attack of January 2019.</div>
+<div class="center"><b>Astor Network</b> is an Ethereum testnet that uses SHA3 as its proof of work method. SHA3 allows for a higher performance, and safer block production. Astor is based on <a href="https://github.com/ethereumclassic/ECIPs/issues/394" target="_blank"> ECIP-1049 </a> which was proposed for Ethereum Classic in response to the 51% attack of January 2019.</div>
 
 <div class="intro-blocks">
 

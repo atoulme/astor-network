@@ -12,7 +12,7 @@ Let's start with the motivation behind the Astor SHA3 Testnet.
 - They used this to reverse a series of deposits that they had made on exchanges.
 - Many users throughout the ecosystem tried to mine ETC to protect it, but were unable to respond quickly enough to prevent the attack.
 
-**A few days after the attack, [ECIP-1049](https://github.com/ethereumclassic/ECIPs/issues/13) was proposed. Its goal was to change ETC's proof of work algorithm to something safer, simpler, and proven. That algorithm is SHA3 (also called Keccak256).**
+**A few days after the attack, [ECIP-1049](https://github.com/ethereumclassic/ECIPs/issues/394) was proposed. Its goal was to change ETC's proof of work algorithm to something safer, simpler, and proven. That algorithm is SHA3 (also called Keccak256).**
 
 ![Astor Tiles](/tiles.png)
 
@@ -48,7 +48,6 @@ Founder and CTO of [Torch](www.torch1.com) a Business Intelligence Platform for 
 <div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/vN7NI0Oi79E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-* [ECIP 1049 Github Thread](https://github.com/ethereumclassic/ECIPs/issues/13)
+* [ECIP 1049 Github Thread](https://github.com/ethereumclassic/ECIPs/issues/394)
 * [Why Ethereum Classic should Adopt Keccak256 for its Proof of Work Algorithm.](https://medium.com/@antsankov/ecip-1049-why-ethereum-classic-should-adopt-keccak256-for-its-proof-of-work-algorithm-e45aee32d8a9)
 * [(pt. 2) Why Ethereum Classic should Adopt Keccak256 for its Proof of Work Algorithm.](https://medium.com/@antsankov/pt-2-ecip-1049-why-ethereum-classic-should-adopt-keccak256-for-its-proof-of-work-algorithm-24052ea6eed1)
