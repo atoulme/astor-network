@@ -3,6 +3,23 @@ title: Node
 lang: en-US
 ---
 ## Running locally
+
+### With Docker Compose
+
+You can [download this Docker Compose file](https://github.com/antsankov/astor-network/blob/master/docs/node/docker-compose.yml) and automate away the set up of a simple Besu with a CPU miner.
+
+Download the file and make sure Docker Compose is installed.
+
+In the directory where you downloaded the file, run:
+
+`$> docker-compose up`
+
+It will run interactively the set up and collaboration of Besu with the CPU miner.
+
+You can exit with Ctrl+C.
+
+### With Docker
+
 We are making available a simple Docker-based set up with Hyperledger Besu so you can try out locally Keccak mining.
 The local network has a very small fixed difficulty as well so you can easily produce blocks on your machine with CPU mining.
 

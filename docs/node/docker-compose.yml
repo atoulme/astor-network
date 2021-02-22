@@ -1,0 +1,16 @@
+version: "3"
+services:
+  besu:
+    image: "tmio/besu-keccak:latest"
+    container_name: "besu"
+    ports:
+      - 8545:8545
+    command: --rpc-http-enabled --rpc-http-api=admin,eth,debug,miner,net,txpool,priv,trace,web3 --rpc-http-cors-origins="all" --network=ecip1049_dev --host-allowlist=* --miner-enabled --miner-coinbase=fe3b557e8fb62b89f4916b721be55ceb828dbd73 --miner-stratum-enabled
+    restart: unless-stopped
+  miner:
+    image: "tmio/keccak-cpu-miner:latest"
+    container_name: "miner"
+    command: http://besu:8545 -n 1000
+    depends_on:
+      - besu
+    restart: always
