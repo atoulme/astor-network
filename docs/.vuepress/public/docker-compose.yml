@@ -7,10 +7,22 @@ services:
       - 8545:8545
       - 30303:30303
       - 30303:30303/udp
+      - 8008:8008
     volumes:
      - ./data:/var/data
      - ./genesis.json:/var/genesis.json
-    command: --data-path=/var/data --Xethstats=besu:astorsecret@ethstats:3000 --rpc-http-enabled --rpc-http-api=admin,eth,debug,miner,net,txpool,priv,trace,web3 --rpc-http-cors-origins="all" --genesis-file=/var/genesis.json --host-allowlist=* --miner-enabled --miner-coinbase=fe3b557e8fb62b89f4916b721be55ceb828dbd73 --miner-stratum-enabled
+    command: >-
+      --data-path=/var/data
+      --Xethstats=besu:astorsecret@ethstats:3000
+      --rpc-http-enabled
+      --rpc-http-api=admin,eth,debug,miner,net,txpool,priv,trace,web3
+      --rpc-http-cors-origins="all"
+      --genesis-file=/var/genesis.json
+      --host-allowlist=*
+      --miner-enabled
+      --miner-coinbase=fe3b557e8fb62b89f4916b721be55ceb828dbd73
+      --miner-stratum-enabled
+      --discovery-enabled=false
     restart: unless-stopped
     depends_on: 
       - ethstats
@@ -28,3 +40,12 @@ services:
       - 80:3000
     environment:
       - WS_SECRET=astorsecret
+  faucet:
+    image: "tmio/tuweni:1.5.0-dev"
+    container_name: "faucet"
+    ports:
+      - 8080:8080
+    volumes:
+     - ./wallet:/var/wallet
+     - ./application.yml:/usr/tuweni/bin/application.yml
+    entrypoint: /usr/tuweni/bin/eth-faucet
